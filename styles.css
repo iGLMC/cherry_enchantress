@@ -1,3 +1,75 @@
-* {
+
+header {
+    display: flex;
+    justify-content:space-between;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.logo {
+    margin-right: 200px;
+}
+.header-banner {
+   justify-self: center;
+}
+.header-banner img{
+    height: auto;
+    width: 600px;
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+}
+.links ul {
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    gap: 8px;
+
     
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+  
+}
+.hero-text{
+    height: auto;
+    width: 400px;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.list-decks {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 75px;
+}
+    
+.list-decks img {
+        border-radius: 5px;
+        outline: auto;
+        outline-color: blue;
+        height: 150px;
+        width: 150px;
+}
+
+figure {
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    border-radius: 25px;
+    flex-shrink: 0;
+    justify-content: center;
+    }
+
+figcaption {
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 10px;
 }
