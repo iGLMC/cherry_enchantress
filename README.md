@@ -1,2 +1,2 @@
 # cherry_enchantress
-This is a web project for Artist and Spritual guide, Cherry Enchangtress.
+This is a web project for artist and spritual guide, Cherry Enchantress.

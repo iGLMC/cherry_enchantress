@@ -1,47 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
 
+}
+
+body {
+   background-image: url(images/cherry-blossom.jpg);
+}
 header {
     display: flex;
     justify-content:space-between;
     flex: 1;
     flex-wrap: wrap;
-    margin-bottom: 50px;
-}
-.logo {
-    margin-right: 20px;
+  }
+header img {
+    border-radius: 75%;
 }
 
-.header-banner {
-   justify-self: center;
-}
-.header-banner img{
+.logo img {
     height: auto;
-    width: 600px;
-    flex: 1;
+    width: 60px;
+    padding: 8px;
+
 }
 
 a {
     text-decoration: none;
+    color:palevioletred;
 }
 .links ul {
+    font-size: 24px;
+    
     list-style: none;
     display: flex;
-    gap: 8px;
+    gap: 10px;
+    padding: 8px;
 
     
 }
+.hero-title {
+    text-align: center;
+    font-size: 48px;
+    font-family: cursive;
+}
 
+.hero-title-text {
+    text-align: center;
+    font-size: 16px;
+    font-family:fantasy;
+    color: purple;
+}
 .hero {
     display: flex;
     justify-content: center;
-  
+    align-items: center;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.hero-text div{
+    padding: 20px;
+}
+
+.hero-splash img{
+
+    height: auto;
+    width: 600px;
+    padding-left: 20px;
 }
 .hero-text{
     height: auto;
     width: 400px;
+    font-size: large;
     flex-wrap: wrap;
-    padding: 40px;
+  
 }
 
+.decks {
+   
+    justify-content: center;
+}
+
+.text-decks {
+    padding: 20px 100px;
+}
+
+
+   
 .list-decks {
         display: flex;
         flex-wrap: wrap;
@@ -50,11 +95,10 @@ a {
 }
     
 .list-decks img {
-        border-radius: 5px;
-        outline: auto;
-        outline-color: blue;
-        height: 150px;
-        width: 150px;
+        border-radius: 25px;
+        
+        height: auto;
+        width: 100%;
 }
 
 figure {
@@ -64,10 +108,35 @@ figure {
     border-radius: 25px;
     flex-shrink: 0;
     justify-content: center;
+    
     }
 
 figcaption {
-    border-radius: 5px;
+    border-radius: 25px;
     text-align: center;
-    padding-top: 10px;
+    
+}
+
+.banner {
+    justify-self: center;
+ }
+ .banner img{
+     height: auto;
+     width: 600px;
+ }
+
+ footer {
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image: url(images/pastel-sky.jpg);
+}
+.about {
+    display: flex;
+}
+.about img {
+    height: auto;
+    width: 100px;
 }
