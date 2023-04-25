@@ -5,7 +5,8 @@
 }
 
 body {
-   background-image: url(images/cherry-blossom.jpg);
+background-image: url(images/cherry-blossom.jpg); 
+
 }
 header {
     display: flex;
@@ -76,47 +77,6 @@ a {
   
 }
 
-.decks {
-   
-    justify-content: center;
-}
-
-.text-decks {
-    padding: 20px 100px;
-}
-
-
-   
-.list-decks {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-bottom: 75px;
-}
-    
-.list-decks img {
-        border-radius: 25px;
-        
-        height: auto;
-        width: 100%;
-}
-
-figure {
-    width: 150px;
-    height: auto;
-    margin: 10px;
-    border-radius: 25px;
-    flex-shrink: 0;
-    justify-content: center;
-    
-    }
-
-figcaption {
-    border-radius: 25px;
-    text-align: center;
-    
-}
-
 .banner {
     justify-self: center;
  }
@@ -140,3 +100,10 @@ figcaption {
     height: auto;
     width: 100px;
 }
+
+
+
+   
+
+
+

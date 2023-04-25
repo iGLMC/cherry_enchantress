@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+background-image: url(images/cherry-tree-in-bloom.jpg) ;
+background-repeat: round;
+}
+
+.decks {
+   
+    justify-content: center;
+}
+
+.text-decks {
+    width: 1fr;
+    justify-self: center;
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    background-image: url(images/cherry-blossom.jpg);
+    padding: 20px 100px;
+}
+
+.list-decks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 75px;
+}
+
+.list-decks img {
+    border-radius: 25px;
+    
+    height: auto;
+    width: 100%;
+}
+
+figure {
+outline: auto;
+outline-color: violet;
+background-image: url(images/cherry-blossom.jpg);
+width: 300px;
+height: auto;
+margin: 10px;
+padding: 20px;
+border-radius: 25px;
+flex-shrink: 0;
+justify-content: center;
+}
+
+figure:hover {
+    color: white;
+}
+
+figcaption {
+border-radius: 25px;
+text-align: center;
+
+}
+
+
+.product-grid {
+    display: grid;
+    gap: .125rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    /*(auto-fit minmax(15rem, 1fr);  
+    
+    repeat(auto-fit minmax(15rem, 1fr));*/
+
+  
+  }
+  
+
+  .card {
+    aspect-ratio: 1 / 1.5;
+      border: 3px solid hotpink;
+  }
+  
+  .card img {
+    width: 100%;
+    aspect-ratio: 1 / 1.25;
+    object-fit: cover; /*(stops the stretch)*/
+  }
+  
+  .stacked {
+    display: grid;
+  }
+  
+  .stacked > * { /*(selects direct child)*/
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }  
+  
+  .card-content {
+    background: white;
+    align-self: end;
+    margin: .5rem .5rem 2rem;
+    padding: .5rem;
+    box-shadow: 0 .25rem 1rem rgb(0 0 0 / .1);
+}
+  .card-title {
+    font-size: 1.25rem;
+    Line-height: 1.1; 
+    Color: firebrick;
+  }
+  
+  .card-price {
+    Font-size: 1.75rem;
+  }
+  
+  
+
+  @media (max-width: 60em) {
+    figure {
+        height: auto;
+        width: 150px;
+    }
+
+    .product-grid {
+       grid-template-columns: repeat(2, 1fr);
+    }
+   }
+   
