@@ -1,4 +1,9 @@
-
+* {
+  margin: 0;
+  padding: 0;
+ /* outline: auto;
+  outline-color: red;*/
+}
 /* custom property */
 :root {
     --background: rgba(85, 214, 178, .85);
@@ -10,14 +15,16 @@
 }
 
 body {
-background: #222;
-margin: 0;
+background-color: #333;
+
 font-family: 'Work Sans', sans-serif;
 font-weight: 400; 
 }
 
 .logo {
-    padding: 3px;
+    
+   
+    padding-top: 3px;
 }
 /* navigation styles start here */
 
@@ -180,9 +187,9 @@ nav a:hover {
     
     
     height: 200vh;
-    
+    background-color: #888;
     background-image: url(./images/cherry-blossom.jpg);
-    background-color: #333;
+    
     background-blend-mode: multiply;
     background-size: cover;
     color: white;
@@ -195,6 +202,7 @@ nav a:hover {
     text-align: center;
     font-size: 48px;
     font-family: 'Sacramento';
+    
 }
 
 .hero-title-text {
@@ -229,32 +237,38 @@ nav a:hover {
   
 }
 
-.banner {
-    justify-self: center;
- }
- .banner img{
-     height: auto;
-     width: 600px;
- }
-
  footer {
-    height: max-content;
-    width: 100%;
+  color: white;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     background: var(--background);
-}
-.about {
-    display: flex;
-}
-.about img {
-    height: auto;
-    width: 100px;
+    padding: 5px 20px;
 }
 
+ footer a {
+  text-decoration: none;
+  color: white;
+ 
+ }
 
+ footer a:hover {
+  color: black;
+ }
 
+footer ul{
+  list-style-type: none;
+  }
+
+  .right-footer-links{
+    margin-left: auto;
+  }
+  
+
+.footer-center {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex: 1;
+}
    
 
 

@@ -1,13 +1,183 @@
-* {
-    margin: 0;
-    padding: 0;
-
+:root {
+  --background: rgba(85, 214, 178, .85);
 }
+
+/*reset boxsizing*/
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 
 body {
-background-image: url(images/cherry-tree-in-bloom.jpg) ;
-background-repeat: round;
+  height: 200vh;
+    background-color: #888;
+    background-image: url(./images/cherry-blossom.jpg);
+    
+    background-blend-mode: multiply;
+    background-size: cover;
+/*background-image: url(images/watercolor-pastel-sky-background.jpg) ;
+background-repeat: round*/
 }
+
+.logo {
+  padding-top: 3px;
+}
+/* navigation styles start here */
+
+
+header {
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  
+  width: 100%;
+}
+
+.nav-toggle { 
+  display: none; /*hides checkbox */
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+content: '';
+position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute; /*absolute to header fixed position*/
+  text-align: left;
+  top: 100%; /*moving 100% (of header) down from the top*/
+  left: 0%;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1,0);
+  transform-origin: top; /*starts to fade from top*/
+  transition: transform 400ms ease-in-out;
+} 
+
+nav ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+nav li { 
+margin-bottom: 1em;
+margin-left: 1em;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+font-size: 1.2rem;
+text-transform: uppercase;
+opacity: 0;
+transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+color: #000;
+}
+
+.nav-toggle:checked ~ nav { 
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) {
+.nav-toggle-label {
+  display: none;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+}
+.logo {
+
+  grid-column: 2 / 3;
+}
+
+nav {
+  all: unset;
+  grid-column: 3 / 4;
+  display: flex; /*increases height to 100 percent of header*/
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav a {
+  opacity: 1;
+  position: relative;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background: black;
+  position: absolute;
+  top: -.75em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transform-origin: center;
+  transition: transform ease-in-out 250ms;
+
+}
+
+nav a:hover::before {
+  transform: scale(1,1);
+}
+
+nav ul {
+  display: flex;
+    }
+
+nav li {
+  margin-left: 3em;
+  margin-bottom: 0;
+}
+} /*ends media */
+
+/* navigation styles ENDS here */
+
 
 .decks {
    
@@ -16,12 +186,15 @@ background-repeat: round;
 
 .text-decks {
     width: 1fr;
+    font-family: 'work sans';
     justify-self: center;
     text-align: center;
-    font-size: 22px;
+    font-size: 1.75rem;
     color: white;
-    background-image: url(images/cherry-blossom.jpg);
-    padding: 20px 100px;
+    /*background-image: url(images/cherry-blossom.jpg);*/
+    padding: 80px 100px;
+    margin-bottom: 30px;
+    
 }
 
 .list-decks {
@@ -125,3 +298,35 @@ text-align: center;
     }
    }
    
+   footer {
+    color: white;
+      display: flex;
+      background: var(--background);
+      padding: 5px 20px;
+  }
+  
+   footer a {
+    text-decoration: none;
+    color: white;
+   
+   }
+  
+   footer a:hover {
+    color: black;
+   }
+  
+  footer ul{
+    list-style-type: none;
+    }
+  
+    .right-footer-links{
+      margin-left: auto;
+    }
+    
+  
+  .footer-center {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex: 1;
+  }
